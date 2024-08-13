@@ -1,3 +1,3 @@
-def call() {
-    println "Hello, World! New"
+def call(String message) {
+    echo "Message from pipeline: ${message}"
 }
