@@ -11,6 +11,8 @@ def call(body) {
     def buildURL = env.BUILD_URL
     def buildId = env.BUILD_ID
 
+
+    node(){
     // Print the jobName
     stage("Print Variable") 
             
@@ -21,6 +23,6 @@ def call(body) {
         
     echo "The JbuildId is: ${buildId}"
     echo "The serviceType is: ${serviceType}"
-
+    }
     
 }
