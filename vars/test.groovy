@@ -12,12 +12,12 @@ def call(body) {
     def buildId = env.BUILD_ID
 
     // Print the jobName
-    stage("Print Variable") {
+    stage("Print Variable") 
             
     echo "The Job Name is: ${jobName}"
     echo "The buildURL is: ${buildURL}"
     echo "The JbuildId is: ${buildId}"
     echo "The serviceType is: ${serviceType}"
 
-    }
+    
 }
