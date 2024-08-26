@@ -1,8 +1,8 @@
-def call() {
+def call(body) {
         
     // evaluate the body block, and collect configuration into the object
 
-    def jobName = env.JOB_NAME
+    def job_Name = env.JOB_NAME
     def buildURL = env.BUILD_URL
     def buildId = env.BUILD_ID
 
