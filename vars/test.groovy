@@ -8,5 +8,6 @@ def call() {
 
     // Print the jobName
     echo "The Job Name is: ${jobName}"
-
+    echo "The Job Name is: ${buildURL}"
+    echo "The Job Name is: ${buildId}"
 }
