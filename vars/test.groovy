@@ -5,7 +5,7 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()    
-    def test = config.service_type
+    def serviceType = config.service_type
 
     def jobName = env.JOB_NAME
     def buildURL = env.BUILD_URL
@@ -15,6 +15,7 @@ def call(body) {
 
     // Print the jobName
     echo "The Job Name is: ${jobName}"
-    echo "The Job Name is: ${buildURL}"
-    echo "The Job Name is: ${buildId}"
+    echo "The buildURL is: ${buildURL}"
+    echo "The JbuildId is: ${buildId}"
+    echo "The serviceType is: ${serviceType}"    
 }
