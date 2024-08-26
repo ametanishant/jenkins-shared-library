@@ -16,6 +16,9 @@ def call(body) {
             
     echo "The Job Name is: ${jobName}"
     echo "The buildURL is: ${buildURL}"
+
+    stage("Print Second Variable")
+        
     echo "The JbuildId is: ${buildId}"
     echo "The serviceType is: ${serviceType}"
 
