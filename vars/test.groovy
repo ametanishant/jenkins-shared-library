@@ -14,15 +14,15 @@ def call(body) {
 
     node(){
     // Print the jobName
-    stage("Print Variable") 
+    stage("Print Variable") {
             
     echo "The Job Name is: ${jobName}"
     echo "The buildURL is: ${buildURL}"
-
-    stage("Print Second Variable")
+    }
+    stage("Print Second Variable") {
         
     echo "The JbuildId is: ${buildId}"
     echo "The serviceType is: ${serviceType}"
     }
-    
+    }
 }
