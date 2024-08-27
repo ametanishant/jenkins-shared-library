@@ -9,9 +9,8 @@ def call(body) {
     body()    
     def serviceType = config.service_type
     def utils = new Utils()
-    def builddetails = new BuildDetails()
     BuildConfig buildConfig = utils.getBuildConfig()
-
+    
 
         
     def jobName = env.JOB_NAME
