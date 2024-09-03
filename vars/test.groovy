@@ -1,4 +1,4 @@
-import BuildConfig
+
 def call(body) {
         
     // evaluate the body block, and collect configuration into the object
@@ -6,11 +6,6 @@ def call(body) {
     body.resolveStrategy = Closure.DELEGATE_FIRST
     body.delegate = config
     body()    
-    def serviceType = config.service_type
-    def utils = new Utils()
-    BuildConfig buildConfig = utils.getBuildConfig()
-    
-
         
     def jobName = env.JOB_NAME
     def buildURL = env.BUILD_URL
