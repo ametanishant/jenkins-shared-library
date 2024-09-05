@@ -11,7 +11,7 @@ def call(body) {
     def buildURL = env.BUILD_URL
     def buildId = env.BUILD_ID
         
-    echo "The Job Name is: ${jobName}"
+    echo "The Job Name  is: ${jobName}"
     echo "The buildURL is: ${buildURL}"
     
    
