@@ -10,7 +10,7 @@ def call(body) {
     def jobName = env.JOB_NAME
     def buildURL = env.BUILD_URL
     def buildId = env.BUILD_ID
-    def SerName = env.service_type
+    def SerName = config.service_type
         
     echo "The Job Name  is: ${jobName}"
     echo "The buildURL is: ${buildURL}"
