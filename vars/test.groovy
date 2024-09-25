@@ -14,7 +14,7 @@ def call(body) {
         
     echo "The Job Name  is: ${jobName}"
     echo "The buildURL is: ${buildURL}"
-    echi "The Service Name is : ${SerName}"
+    echo "The Service Name is : ${SerName}"
     
    
     
