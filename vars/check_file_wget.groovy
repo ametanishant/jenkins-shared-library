@@ -21,7 +21,7 @@ def call(body) {
 
     try {
         // Download the tar.gz file using 'wget'
-        sh "wget ${fileUrl}"
+        sh "wget set -x; ${fileUrl}"
 
         // Extract the tar.gz file
         sh "tar -xvf freedict-deu-eng-1.9-fd1.dictd.tar.xz"
