@@ -20,6 +20,7 @@ def call(body) {
     def fileUrl = "https://download.freedict.org/dictionaries/deu-eng/1.9-fd1/freedict-deu-eng-1.9-fd1.dictd.tar.xz"
 
     try {
+        echo "Enter Try Loop....."
         // Download the tar.gz file using 'wget'
         sh "wget set -x; ${fileUrl}"
 
