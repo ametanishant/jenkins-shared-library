@@ -21,7 +21,7 @@ def call(body) {
 
     try {
         // Download the tar.gz file using 'wget'
-        export PATH=$PATH:/opt/homebrew/bin/wget
+        sh "export PATH=$PATH:/opt/homebrew/bin/wget"
         sh "wget ${fileUrl}"
 
         // Extract the tar.gz file
