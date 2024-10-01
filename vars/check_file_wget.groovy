@@ -21,8 +21,8 @@ def call(body) {
 
     try {
         // Download the tar.gz file using 'wget'
-        sh "export PATH=$PATH:/opt/homebrew/bin/wget"
-        sh "wget ${fileUrl}"
+        sh '/bin/sh -c "export PATH=$PATH:/opt/homebrew/bin/wget"
+        sh '/bin/sh -c "wget ${fileUrl}"
 
         // Extract the tar.gz file
         sh "tar -xvf freedict-deu-eng-1.9-fd1.dictd.tar.xz"
