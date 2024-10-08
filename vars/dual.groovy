@@ -1,25 +1,15 @@
-def call1(body) {
-    println "call1 was called with body: ${body}"
-    // Add your logic here
+// vars/myLibrary.groovy
+
+def jobOne() {
+    echo 'Executing Job One...'
+    // Add your logic for Job One here
+    // For example, running a shell command
+    sh 'echo Hello from Job One'
 }
 
-def call2(body) {
-    println "call2 was called with body: ${body}"
-    // Add your logic here
-}
-
-def call(Closure body) {
-    // Create a map to hold parameters
-    def params = [:]
-
-    // Evaluate the body closure to capture the parameters
-    body.delegate = params
-    body()
-
-    // Use the parameters as needed
-    if (params.service_type) {
-        println "Service type is: ${params.service_type}"
-    } else {
-        println "No service type provided."
-    }
+def jobTwo() {
+    echo 'Executing Job Two...'
+    // Add your logic for Job Two here
+    // For example, building a Docker image
+    sh 'echo Building Docker Image for Job Two'
 }
