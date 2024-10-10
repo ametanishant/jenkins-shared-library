@@ -17,7 +17,8 @@ def checkc(body) {
     if (buildName == 'B' || buildName == 'Bu') {
         branchName = 'ari'
     } else if (['Confi', 'Craf', 'darwi', 'release'].contains(buildName)) {
-        branchName = 'vee
+        branchName = 'vee'
     }
+    println ${branchName}
 }
     
