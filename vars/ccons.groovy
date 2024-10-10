@@ -10,7 +10,7 @@ def checkc(Closure body) {
 
     // 'buildName' is passed from the pipeline 
     def buildName = config.buildName ?: ''  // Default to empty string if not set
-    echo "someObject: ${someObject}"
+    echo "buildName: ${buildName}"
     def nodeName = config.nodeName ?: ''    // Default to empty string if not set
 
     def branchName
