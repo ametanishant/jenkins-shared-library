@@ -1,4 +1,4 @@
-def checkc(body) {
+def checkc() {
     // Evaluate the body block, and collect configuration into the object
     def config = [:]
     body.resolveStrategy = Closure.DELEGATE_FIRST
