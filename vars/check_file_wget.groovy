@@ -15,17 +15,17 @@ def call(body) {
     // 'buildName' is passed from the pipeline and will replace 'bighorn' in the file URL
     def buildName = config.buildName 
 
-    // Define the file URL to download the tar.gz file, where 'buildName' is the variable part
+    // Define the file URL to download the tar.xz file, where 'buildName' is the variable part
     def fileUrl = "https://download.freedict.org/dictionaries/deu-eng/1.9-fd1/freedict-deu-eng-1.9-fd1.dictd.tar.xz"
-    sh "export PATH=/opt/homebrew/bin:$PATH && wget -O ${outputFile} ${url}"
+    def outputFile = "freedict-deu-eng-1.9-fd1.dictd.tar.xz"
 
     try {
-        echo "Enter Try Loop....."
-        // Download the tar.gz file using 'wget'
-        sh "/opt/homebrew/bin/wget set -x; ${fileUrl}"
+        echo "Entering Try Loop....."
+        // Download the tar.xz file using 'wget'
+        sh "export PATH=/opt/homebrew/bin:\$PATH && wget -O ${outputFile} ${fileUrl}"
 
-        // Extract the tar.gz file
-        sh "tar -xvf freedict-deu-eng-1.9-fd1.dictd.tar.xz"
+        // Extract the tar.xz file
+        sh "tar -xvf ${outputFile}"
 
         // If extraction is successful
         echo "Created tar file properly"
@@ -34,13 +34,10 @@ def call(body) {
         echo "Error in creating tar file, triggering Jenkins build..."
 
         // Build the Jenkins URL dynamically based on 'jenkinsJobName'
-        def jenkinsUrl = ""
+        def jenkinsJobName = config.jenkinsJobName ?: 'DefaultJob'
+        def jenkinsUrl = "http://localhost:8080/job/${jenkinsJobName}/build"
 
-      
-      
+        // Trigger the Jenkins build using 'curl'
+        sh "curl -X POST ${jenkinsUrl}"
     }
-
 }
-
-
-    
