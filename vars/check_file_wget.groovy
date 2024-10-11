@@ -13,8 +13,7 @@ def call(body) {
     env.LANG = "C.UTF-8"
 
     // 'buildName' is passed from the pipeline and will replace 'bighorn' in the file URL
-    def buildName = config.buildName ?: 'bighorn' // Default to 'bighorn' if not provided
-
+    def buildName = config.buildName 
 
     // Define the file URL to download the tar.gz file, where 'buildName' is the variable part
     def fileUrl = "https://download.freedict.org/dictionaries/deu-eng/1.9-fd1/freedict-deu-eng-1.9-fd1.dictd.tar.xz"
