@@ -21,7 +21,7 @@ def call(body) {
     try {
         echo "Enter Try Loop....."
         // Download the tar.gz file using 'wget'
-        sh "wget set -x; ${fileUrl}"
+        sh "/opt/homebrew/bin/wget set -x; ${fileUrl}"
 
         // Extract the tar.gz file
         sh "tar -xvf freedict-deu-eng-1.9-fd1.dictd.tar.xz"
