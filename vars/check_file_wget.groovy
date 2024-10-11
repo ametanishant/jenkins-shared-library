@@ -17,6 +17,7 @@ def call(body) {
 
     // Define the file URL to download the tar.gz file, where 'buildName' is the variable part
     def fileUrl = "https://download.freedict.org/dictionaries/deu-eng/1.9-fd1/freedict-deu-eng-1.9-fd1.dictd.tar.xz"
+    sh "export PATH=/opt/homebrew/bin:$PATH && wget -O ${outputFile} ${url}"
 
     try {
         echo "Enter Try Loop....."
