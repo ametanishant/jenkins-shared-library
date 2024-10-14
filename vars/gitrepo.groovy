@@ -10,7 +10,7 @@ def call(body) {
   
 
     // Extract variables from the config and environment
-    def git_repo = config.GIT_REPO_URL  
+    def git_repo = env.GIT_REPO_URL  
     println "${git_repo}"  
     
   
