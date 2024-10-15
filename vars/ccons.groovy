@@ -9,7 +9,7 @@ def checkc(Closure body) {
     env.LANG = "C.UTF-8"
 
     // 'buildName' is passed from the pipeline 
-    dev buildUrl = env.BUILD_URL
+    def buildUrl = env.BUILD_URL
     println "${buildUrl}" 
     def buildName = config.buildName ?: ''  // Default to empty string if not set
     echo "buildName: ${buildName}"
