@@ -1,3 +1,4 @@
+import com.nishant.BuildConfig
 
 def call(body) {
     def config = [:]
